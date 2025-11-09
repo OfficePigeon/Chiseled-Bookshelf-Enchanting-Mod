@@ -1,0 +1,29 @@
+{
+	"schemaVersion": 1,
+	"id": "wich_chiseled-bookshelf-enchanting",
+	"version": "${version}",
+	"name": "Chiseled Bookshelf Enchanting",
+	"description": "Allows chiseled bookshelves to be used as a source of enchanting power.",
+	"authors": [ "dovewich" ],
+	"contact": {
+		"homepage": "https://www.wich.fun/",
+		"sources": "https://github.com/OfficePigeon/Chiseled-Bookshelf-Enchanting-Mod"
+	},
+	"license": "",
+	"icon": "assets/wich/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"fun.wich.ChiseledBookshelfEnchanting"
+		]
+	},
+	"mixins": [
+		"wich.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.17.3",
+		"minecraft": ">=1.21.9",
+		"java": ">=21",
+		"fabric-api": "*"
+	}
+}
