@@ -1,12 +1,10 @@
 package fun.wich.mixin;
 
 import fun.wich.ChiseledBookshelfEnchanting;
-import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.ChiseledBookshelfBlock;
 import net.minecraft.block.EnchantingTableBlock;
 import net.minecraft.registry.tag.BlockTags;
-import net.minecraft.registry.tag.TagKey;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.state.property.BooleanProperty;
@@ -15,11 +13,10 @@ import net.minecraft.world.World;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
-import org.spongepowered.asm.mixin.injection.Redirect;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 @Mixin(EnchantingTableBlock.class)
-public abstract class EnchantingTableBlockMixin {
+public abstract class ChiseledBookshelfEnchanting_EnchantingTableBlockMixin {
 	@Inject(method="canAccessPowerProvider", at=@At("RETURN"), cancellable=true)
 	private static void AllowChiseledBookshelvesToActAsPowerProvider(World world, BlockPos tablePos, BlockPos providerOffset, CallbackInfoReturnable<Boolean> cir) {
 		if (cir.getReturnValue()) return;
